@@ -1,0 +1,16 @@
+{%extends 'base.html'%}
+
+{%block main%}
+	<div class="grid">
+		<h3><center>{{user.firstname}} {{user.lastname}}</center></h3>
+		<p> <img src="{{url_for('static',filename="uploads/"+user.photo) }}"/>
+		{{user.email}} <br> {{user.location}} <br> Joined on {{user.date_joined}}</p>
+		<h5> About Me </h5>
+		<p> {{user.biography}}</p>
+		<div class="flex">
+		<button type="button" class="sm">Send Message</button> <button type="button" class="fw">Follow</button>	
+	</div>
+	<br>
+	<br>
+</div>
+{%endblock%}
